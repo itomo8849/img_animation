@@ -1,0 +1,34 @@
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+@function rem($px, $base: 16px) {
+  $value: $px;
+
+  // 単位がpx以外の場合は警告を出してそのまま返す
+  @if (unit($px) != 'px') {
+    @warn 'rem()の引数にpx以外の値を指定しても計算できません';
+    @return $value;
+  }
+
+  $value: (strip-unit($px) / strip-unit($base)) * 1rem;
+
+  @return $value;
+}
+// 第1引数に指定したいピクセル値を指定
+// 第2引数に基準となる画面幅（デザインカンプの横幅）を指定
+@function vw($px, $base: 1400px) {
+  $value: $px;
+
+  // 単位がpx以外の場合は警告を出してそのまま返す
+  @if (unit($px) != 'px') {
+    @warn 'vw()の引数にpx以外の値を指定しても計算できません';
+    @return $value;
+  }
+
+  $value: (strip-unit($px) / strip-unit($base)) * 100vw;
+
+  @return $value;
+}

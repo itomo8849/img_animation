@@ -1,0 +1,35 @@
+@use "../../object/variables/" as var;
+@use "../../mixins/" as mix;
+@use "../../functions/" as func;
+
+.bl_headerConts{
+  padding: 0 16px;
+  text-align: center;
+}
+.bl_headerConts_ttl{
+  color: var.$pointColorDeepBlue;
+  font-family: var.$alphabetFont;
+}
+.bl_headerConts_nav{
+  margin-top: 32px;
+}
+.bl_headerConts_list{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.bl_headerConts_link{
+  display: block;
+  width: 200px;
+  border-radius: 8px;
+  background-color: var.$pointColorYellow;
+  color: #fff;
+  font-family: var.$alphabetFont;
+  font-weight: bold;
+  line-height: 56px;
+  text-transform: capitalize;
+}
+.ly_cont{
+  width: 90%;
+  margin: 200px auto 100px;
+}

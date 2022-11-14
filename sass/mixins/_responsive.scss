@@ -1,0 +1,8 @@
+@use "sass:map";
+@use "../object/variables/" as var;
+
+@mixin responsive($breakpoint) {
+  @media screen and (max-width:#{map.get(var.$breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
