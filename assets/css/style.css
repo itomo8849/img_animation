@@ -80,6 +80,44 @@ main {
   margin: 200px auto 100px;
 }
 
+.bl_sect {
+  padding: 80px;
+  background: #f6f6f6;
+  border-radius: 32px;
+}
+
+.bl_sect:not(:first-child) {
+  margin-top: 80px;
+}
+
+.bl_lv2Heading {
+  margin-bottom: 24px;
+  color: #6496ab;
+  font-family: "Montserrat", sans-serif;
+}
+
+.bl_cardUnit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: -24px;
+}
+
+.bl_card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-top: 24px;
+}
+
+.bl_card_ttl {
+  order: 2;
+}
+
+.bl_card_img {
+  order: 1;
+}
+
 .hp_aspect {
   position: relative;
   width: 100%;
