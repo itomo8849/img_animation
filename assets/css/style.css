@@ -133,7 +133,7 @@ main {
   background-color: #eaebe6;
   opacity: 0;
 }
-.bl_coverSlide.is_inview::after {
+.bl_coverSlide.is_inview::after, .is_show .bl_coverSlide.is_childInview::after {
   opacity: 1;
   -webkit-animation-name: kf-bl_coverSlide;
           animation-name: kf-bl_coverSlide;
@@ -149,6 +149,36 @@ main {
           animation-direction: normal;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+.is_show .bl_card:nth-child(1) .bl_coverSlide.is_childInview::after {
+  transition-delay: 0s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.is_show .bl_card:nth-child(2) .bl_coverSlide.is_childInview::after {
+  transition-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.is_show .bl_card:nth-child(3) .bl_coverSlide.is_childInview::after {
+  transition-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.is_show .bl_card:nth-child(4) .bl_coverSlide.is_childInview::after {
+  transition-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.is_show .bl_card:nth-child(5) .bl_coverSlide.is_childInview::after {
+  transition-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.is_show .bl_card:nth-child(6) .bl_coverSlide.is_childInview::after {
+  transition-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @-webkit-keyframes kf-bl_coverSlide {
@@ -191,7 +221,7 @@ main {
 .bl_imgZoom, .bg-bl_imgZoom {
   opacity: 0;
 }
-.is_inview .bl_imgZoom, .is_inview .bg-bl_imgZoom {
+.is_inview .bl_imgZoom, .is_inview .bg-bl_imgZoom, .is_show .is_childInview .bl_imgZoom, .is_show .is_childInview .bg-bl_imgZoom {
   opacity: 1;
   transition: transform 0.3s ease;
   -webkit-animation-name: kf-img-show;
@@ -209,8 +239,38 @@ main {
   -webkit-animation-fill-mode: none;
           animation-fill-mode: none;
 }
-.is_inview .bl_imgZoom:hover, .is_inview .bg-bl_imgZoom:hover {
+.is_inview .bl_imgZoom:hover, .is_inview .bg-bl_imgZoom:hover, .is_show .is_childInview .bl_imgZoom:hover, .is_show .is_childInview .bg-bl_imgZoom:hover {
   transform: scale(1.05);
+}
+.is_show .bl_card:nth-child(1) .is_childInview .bl_imgZoom, .is_show .bl_card:nth-child(1) .is_childInview .bg-bl_imgZoom {
+  transition: opacity 0s 0s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.is_show .bl_card:nth-child(2) .is_childInview .bl_imgZoom, .is_show .bl_card:nth-child(2) .is_childInview .bg-bl_imgZoom {
+  transition: opacity 0s 0.2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.is_show .bl_card:nth-child(3) .is_childInview .bl_imgZoom, .is_show .bl_card:nth-child(3) .is_childInview .bg-bl_imgZoom {
+  transition: opacity 0s 0.4s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.is_show .bl_card:nth-child(4) .is_childInview .bl_imgZoom, .is_show .bl_card:nth-child(4) .is_childInview .bg-bl_imgZoom {
+  transition: opacity 0s 0.6s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.is_show .bl_card:nth-child(5) .is_childInview .bl_imgZoom, .is_show .bl_card:nth-child(5) .is_childInview .bg-bl_imgZoom {
+  transition: opacity 0s 0.8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.is_show .bl_card:nth-child(6) .is_childInview .bl_imgZoom, .is_show .bl_card:nth-child(6) .is_childInview .bg-bl_imgZoom {
+  transition: opacity 0s 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @-webkit-keyframes kf-img-show {

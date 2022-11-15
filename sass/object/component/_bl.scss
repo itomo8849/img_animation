@@ -83,7 +83,8 @@
     background-color: #eaebe6;
     opacity: 0;
   }
-  &.is_inview {
+  &.is_inview,
+  .is_show &.is_childInview {
     &::after {
       opacity: 1;
 
@@ -92,6 +93,42 @@
         $duration: 1.6s,
         $timing-function: ease-in-out
       );
+    }
+  }
+  .is_show .bl_card:nth-child(1) &.is_childInview{
+    &::after{
+      transition-delay: 0s;
+      animation-delay: 0s;
+    }
+  }
+  .is_show .bl_card:nth-child(2) &.is_childInview{
+    &::after{
+      transition-delay: 0.2s;
+      animation-delay: 0.2s;
+    }
+  }
+  .is_show .bl_card:nth-child(3) &.is_childInview{
+    &::after{
+      transition-delay: 0.4s;
+      animation-delay: 0.4s;
+    }
+  }
+  .is_show .bl_card:nth-child(4) &.is_childInview{
+    &::after{
+      transition-delay: 0.6s;
+      animation-delay: 0.6s;
+    }
+  }
+  .is_show .bl_card:nth-child(5) &.is_childInview{
+    &::after{
+      transition-delay: 0.8s;
+      animation-delay: 0.8s;
+    }
+  }
+  .is_show .bl_card:nth-child(6) &.is_childInview{
+    &::after{
+      transition-delay: 1.0s;
+      animation-delay: 1.0s;
     }
   }
 }
@@ -118,7 +155,8 @@
 .bl_imgZoom {
   opacity: 0;
 
-  .is_inview & {
+  .is_inview &,
+  .is_show .is_childInview & {
     opacity: 1;
     transition: transform 0.3s ease;
     @include mix.animation(
@@ -131,6 +169,31 @@
     &:hover {
       transform: scale(1.05);
     }
+
+  }
+  .is_show .bl_card:nth-child(1) .is_childInview &{
+    transition: opacity 0s 0s;
+    animation-delay: 0s;
+  }
+  .is_show .bl_card:nth-child(2) .is_childInview &{
+    transition: opacity 0s 0.2s;
+    animation-delay: 0.2s;
+  }
+  .is_show .bl_card:nth-child(3) .is_childInview &{
+    transition: opacity 0s 0.4s;
+    animation-delay: 0.4s;
+  }
+  .is_show .bl_card:nth-child(4) .is_childInview &{
+    transition: opacity 0s 0.6s;
+    animation-delay: 0.6s;
+  }
+  .is_show .bl_card:nth-child(5) .is_childInview &{
+    transition: opacity 0s 0.8s;
+    animation-delay: 0.8s;
+  }
+  .is_show .bl_card:nth-child(6) .is_childInview &{
+    transition: opacity 0s 1.0s;
+    animation-delay: 1.0s;
   }
 }
 
@@ -191,3 +254,93 @@
     padding-top: 50%;
   }
 }
+
+// .bl_childCoverSlide {
+//   position: relative;
+//   overflow: hidden;
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     z-index: 2;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-color: #eaebe6;
+//     opacity: 0;
+//   }
+//   .is_show &.is_childInview {
+//     &::after {
+//       opacity: 1;
+
+//       @include mix.animation(
+//         $name: kf-bl_coverSlide,
+//         $duration: 1.6s,
+//         $timing-function: ease-in-out
+//       );
+//     }
+//   }
+// }
+
+// .is_childHoverDarken {
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 1;
+//     transition: background-color 0.3s ease;
+//     pointer-events: none;
+//     @include mix.animation(
+//       $name: kf-img-show,
+//       $duration: 1.6s,
+//       $timing-function: ease-in-out,
+//       $fill-mode: none
+//       );
+//     }
+//   &:hover::before {
+//     background-color: rgba(0, 0, 0, 0.4);
+//   }
+// }
+
+// .bg-bl_imgZoom {
+//   background-image: url(images/image-1.jpg);
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   width: 100%;
+//   @extend .bl_childImgZoom;
+// }
+
+// .img-bg50 {
+//   position: relative;
+  
+//   &::before {
+//     display: block;
+//     content: '';
+//     padding-top: 50%;
+//   }
+// }
+
+
+// .bl_childImgZoom {
+// opacity: 0;
+
+// .is_show .is_childInview & {
+//   opacity: 1;
+//   transition: transform 0.3s ease;
+//   @include mix.animation(
+//     $name: kf-img-show,
+//     $duration: 1.6s,
+//     $timing-function: ease-in-out,
+//     $fill-mode: none
+//   );
+
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+// }
+// }
