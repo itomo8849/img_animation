@@ -95,40 +95,12 @@
       );
     }
   }
-  .is_show .bl_card:nth-child(1) &.is_childInview{
-    &::after{
-      transition-delay: 0s;
-      animation-delay: 0s;
-    }
-  }
-  .is_show .bl_card:nth-child(2) &.is_childInview{
-    &::after{
-      transition-delay: 0.2s;
-      animation-delay: 0.2s;
-    }
-  }
-  .is_show .bl_card:nth-child(3) &.is_childInview{
-    &::after{
-      transition-delay: 0.4s;
-      animation-delay: 0.4s;
-    }
-  }
-  .is_show .bl_card:nth-child(4) &.is_childInview{
-    &::after{
-      transition-delay: 0.6s;
-      animation-delay: 0.6s;
-    }
-  }
-  .is_show .bl_card:nth-child(5) &.is_childInview{
-    &::after{
-      transition-delay: 0.8s;
-      animation-delay: 0.8s;
-    }
-  }
-  .is_show .bl_card:nth-child(6) &.is_childInview{
-    &::after{
-      transition-delay: 1.0s;
-      animation-delay: 1.0s;
+  @for $i from 1 through 6{
+    .is_show .bl_card:nth-child(#{$i}) &.is_childInview{
+      &::after{
+        // $num : $i * 1s;
+        @include mix.imgSlideBGOrder($i);
+      }
     }
   }
 }
@@ -171,29 +143,10 @@
     }
 
   }
-  .is_show .bl_card:nth-child(1) .is_childInview &{
-    transition: opacity 0s 0s;
-    animation-delay: 0s;
-  }
-  .is_show .bl_card:nth-child(2) .is_childInview &{
-    transition: opacity 0s 0.2s;
-    animation-delay: 0.2s;
-  }
-  .is_show .bl_card:nth-child(3) .is_childInview &{
-    transition: opacity 0s 0.4s;
-    animation-delay: 0.4s;
-  }
-  .is_show .bl_card:nth-child(4) .is_childInview &{
-    transition: opacity 0s 0.6s;
-    animation-delay: 0.6s;
-  }
-  .is_show .bl_card:nth-child(5) .is_childInview &{
-    transition: opacity 0s 0.8s;
-    animation-delay: 0.8s;
-  }
-  .is_show .bl_card:nth-child(6) .is_childInview &{
-    transition: opacity 0s 1.0s;
-    animation-delay: 1.0s;
+  @for $i from 1 through 6{
+    .is_show .bl_card:nth-child(#{$i}) .is_childInview &{
+      @include mix.imgShowOrder($i);
+    }
   }
 }
 
