@@ -17,3 +17,12 @@
     fill-mode: $fill-mode;
   }
 }
+
+@mixin imgSlideBGOrder($sec){
+  transition-delay: ($sec - 1) * .2s ;
+  animation-delay: ($sec - 1) * .2s;
+}
+@mixin imgShowOrder($sec){
+  transition: opacity 0s ($sec - 1) * .2s;
+  animation-delay: ($sec - 1) * .2s;
+}
