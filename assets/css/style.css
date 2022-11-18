@@ -118,11 +118,11 @@ main {
   order: 1;
 }
 
-.bl_coverSlide {
+.bl_dispAnime {
   position: relative;
   overflow: hidden;
 }
-.bl_coverSlide::after {
+.bl_dispAnime::after {
   content: "";
   position: absolute;
   z-index: 2;
@@ -133,10 +133,10 @@ main {
   background-color: #eaebe6;
   opacity: 0;
 }
-.bl_coverSlide.is_inview::after, .is_show .bl_coverSlide.is_childInview::after {
+.bl_dispAnime.is_inview::after, .is_show .bl_dispAnime.is_childInview::after {
   opacity: 1;
-  -webkit-animation-name: kf-bl_coverSlide;
-          animation-name: kf-bl_coverSlide;
+  -webkit-animation-name: kf-bl_dispAnime;
+          animation-name: kf-bl_dispAnime;
   -webkit-animation-duration: 1.6s;
           animation-duration: 1.6s;
   -webkit-animation-timing-function: ease-in-out;
@@ -150,38 +150,38 @@ main {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.is_show .bl_card:nth-child(1) .bl_coverSlide.is_childInview::after {
+.is_show .bl_card:nth-child(1) .bl_dispAnime.is_childInview::after {
   transition-delay: 0s;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
 }
-.is_show .bl_card:nth-child(2) .bl_coverSlide.is_childInview::after {
+.is_show .bl_card:nth-child(2) .bl_dispAnime.is_childInview::after {
   transition-delay: 0.2s;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
-.is_show .bl_card:nth-child(3) .bl_coverSlide.is_childInview::after {
+.is_show .bl_card:nth-child(3) .bl_dispAnime.is_childInview::after {
   transition-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.is_show .bl_card:nth-child(4) .bl_coverSlide.is_childInview::after {
+.is_show .bl_card:nth-child(4) .bl_dispAnime.is_childInview::after {
   transition-delay: 0.6s;
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
-.is_show .bl_card:nth-child(5) .bl_coverSlide.is_childInview::after {
+.is_show .bl_card:nth-child(5) .bl_dispAnime.is_childInview::after {
   transition-delay: 0.8s;
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
-.is_show .bl_card:nth-child(6) .bl_coverSlide.is_childInview::after {
+.is_show .bl_card:nth-child(6) .bl_dispAnime.is_childInview::after {
   transition-delay: 1s;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-@-webkit-keyframes kf-bl_coverSlide {
+@-webkit-keyframes kf-bl_dispAnime {
   0% {
     transform-origin: left;
     transform: scaleX(0);
@@ -200,7 +200,7 @@ main {
   }
 }
 
-@keyframes kf-bl_coverSlide {
+@keyframes kf-bl_dispAnime {
   0% {
     transform-origin: left;
     transform: scaleX(0);

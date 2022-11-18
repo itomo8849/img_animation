@@ -68,7 +68,7 @@
 
 
 
-.bl_coverSlide {
+.bl_dispAnime {
   position: relative;
   overflow: hidden;
 
@@ -89,7 +89,7 @@
       opacity: 1;
 
       @include mix.animation(
-        $name: kf-bl_coverSlide,
+        $name: kf-bl_dispAnime,
         $duration: 1.6s,
         $timing-function: ease-in-out
       );
@@ -105,7 +105,7 @@
   }
 }
 
-@keyframes kf-bl_coverSlide {
+@keyframes kf-bl_dispAnime {
   0% {
     transform-origin: left;
     transform: scaleX(0);
