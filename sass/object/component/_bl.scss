@@ -188,22 +188,22 @@
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
+// 背景画像で設定する場合
+// .bg-bl_imgZoom {
+//   background-image: url(images/image-1.jpg);
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   width: 100%;
+//   @extend .bl_imgZoom;
+// }
 
-.bg-bl_imgZoom {
-  background-image: url(images/image-1.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  @extend .bl_imgZoom;
-}
-
-.img-bg50 {
-  position: relative;
+// .img-bg50 {
+//   position: relative;
   
-  &::before {
-    display: block;
-    content: '';
-    padding-top: 50%;
-  }
-}
+//   &::before {
+//     display: block;
+//     content: '';
+//     padding-top: 50%;
+//   }
+// }
